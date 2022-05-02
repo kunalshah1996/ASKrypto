@@ -1,22 +1,24 @@
 import React from 'react'
-import { AppBar, Typography, Toolbar, Avatar, IconButton, MenuItem, Menu } from '@material-ui/core';
+import { AppBar, Typography, Toolbar, Avatar, IconButton, MenuItem, Menu, Container } from '@material-ui/core';
 import useStyles from './styles';
 import { Link } from 'react-router-dom';
+import logo from '../../images/ASKrypto.png'
 
 const Navbar = () => {
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+        setAnchorEl(anchorEl ? null : event.currentTarget);
     };
     const handleClose = () => {
         setAnchorEl(null);
     };
+
     return (
         <AppBar className={classes.appBar} color="inherit" >
             <div className={classes.brandContainer} >
-                <a href='/'><img className={classes.image} alt="icon" height="60" /></a>
+                <a href='/'><img className={classes.image} alt="icon" src={logo} /></a>
                 {/* <Typography className={classes.heading} variant="h2" align="center">ASKrypto</Typography> */}
                 <Toolbar className={classes.toolbar} >
                     <Link to="/learn" className={classes.link}>
@@ -25,13 +27,13 @@ const Navbar = () => {
                     <Link to="/market" className={classes.link}>
                         Market
                     </Link>
-                    <Link to="/contact" className={classes.link}>
+                    <Link to="/trustcircle" className={classes.link}>
                         Trust Circles
                     </Link>
-                    <Link to="/faq" className={classes.link}>
-                        Chat
+                    <Link to="/chat" className={classes.link}>
+                        Forum
                     </Link>
-                    <Link to="/faq" className={classes.link}>
+                    <Link to="/about" className={classes.link}>
                         About
                     </Link>
                     <div className={classes.profile}>
@@ -45,7 +47,7 @@ const Navbar = () => {
                             aria-haspopup="true"
                             aria-expanded={open ? 'true' : undefined}
                         >
-                            <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+                            <Avatar sx={{ width: 32, height: 32 }}>N</Avatar>
                         </IconButton>
                     </div>
                 </Toolbar>
@@ -54,9 +56,13 @@ const Navbar = () => {
                 anchorEl={anchorEl}
                 id="account-menu"
                 open={open}
+
                 onClose={handleClose}
                 onClick={handleClose}
                 PaperProps={{
+                    style: {
+                        transform: 'translateY(55%)',
+                    },
                     elevation: 100,
                     sx: {
                         overflow: 'visible',
@@ -83,10 +89,10 @@ const Navbar = () => {
                     },
                 }}
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+            // anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
             >
-                <MenuItem>
-                    Add another account
+                <MenuItem component="a" href="/investmentportfolio">
+                    Investment Portfolio
                 </MenuItem>
                 <MenuItem>
                     Settings

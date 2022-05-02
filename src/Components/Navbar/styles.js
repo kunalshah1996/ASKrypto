@@ -10,7 +10,8 @@ export default makeStyles((theme) => ({
         // justifyContent: 'space-between',
         // alignItems: 'center',
         // padding: '10px 50px',
-        backgroundColor: "#2a2e30"
+        backgroundColor: "#2a2e30",
+        zIndex: 1300
     },
     heading: {
         color: 'rgba(0,183,255, 1)',
@@ -31,7 +32,9 @@ export default makeStyles((theme) => ({
         marginLeft: '20px'
     },
     image: {
-        marginLeft: '15px',
+        marginLeft: '25px',
+        height: '80px',
+        paddingTop: '10px'
     },
     toolbar: {
         display: 'flex',

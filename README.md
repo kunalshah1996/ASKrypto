@@ -2,6 +2,7 @@
 
 ## Minimal Path to Awesome
 
+-Make sure Node and NPM are installed in the system.
 - Clone this repository
 - In the project directory, in the command-line run:
   - **npm install**

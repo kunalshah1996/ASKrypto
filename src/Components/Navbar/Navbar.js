@@ -34,7 +34,7 @@ const Navbar = () => {
                         Forum
                     </Link>
                     <Link to="/about" className={classes.link}>
-                        About
+                        About Project
                     </Link>
                     <div className={classes.profile}>
                         <Typography className={classes.userName} variant="h6">Name</Typography>

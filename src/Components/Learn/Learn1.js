@@ -64,9 +64,9 @@ const Learn1 = () => {
     };
 
     return (
-        <Container disableGutters maxWidth="disable">
-            <Grid container directon={'row'} overflow='auto'>
-                <Grid item sx={{
+        <Container disableGutters maxWidth="disable" marginTop={1}>
+            <Grid container directon={'row'} overflow='auto' marginTop={1}>
+                <Grid marginTop={0.5} item sx={{
                     width: drawerWidth,
                     minHeight: "87vh"
                 }}
@@ -239,7 +239,7 @@ const Learn1 = () => {
                         </Collapse>
                     </List>
                 </Grid>
-                <Grid item style={{ border: "1px solid white" }} sx={{
+                <Grid marginTop={0.5} item style={{ border: "1px solid white" }} sx={{
                     width: "1185px",
                     minHeight: "87vh"
                 }}>

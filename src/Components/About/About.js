@@ -1,12 +1,13 @@
 import React from 'react'
 import GoogleDocsViewer from "react-google-docs-viewer";
+import { Grid } from '@material-ui/core';
 
 
 const About = () => {
     return (
-        <>
-            <iFrame style={{ maxWidth: 840, width: '100%', minHeight: 1000, height: '100%' }} src="https://docs.google.com/document/d/e/2PACX-1vR112mTTiXt77I-6SWYSX71wAgYu_SdWxk7hYkRUAcud6WJ_KishQb32mIOwxp3A-_V3qlxY-aGfs2U/pub?embedded=true"></iFrame>
-        </>
+        <Grid container align="center" justify="center" justify-content="center" >
+            <iFrame style={{ maxWidth: 840, width: '100%', minHeight: 1000, height: '100%' }} src="https://docs.google.com/document/d/e/2PACX-1vRLUrEDoZAtGrk5M4tII7dKs_YL1uecqQb18Pth7w8MVbyHPkx7gp5LmwkLqDaLQK98mWG7zlzE__ed/pub?embedded=true"></iFrame>
+        </Grid>
     )
 }
 
